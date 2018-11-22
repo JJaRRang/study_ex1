@@ -19,6 +19,8 @@
 	<properties>
 	    <spring.maven.artifact.version>4.2.4.RELEASE</spring.maven.artifact.version>
 		<egovframework.rte.version>3.7.0</egovframework.rte.version>
+		<java.version>1.8</java.version>
+		<servlet.version>3.1.0</servlet.version>
 	</properties>
 
 	<repositories>
@@ -83,12 +85,12 @@
 			<version>${egovframework.rte.version}</version>
 		</dependency>
 
-        <dependency>
-		    <groupId>javax.servlet</groupId>
-		    <artifactId>servlet-api</artifactId>
-		    <scope>provided</scope>
-		    <version>2.5</version>
-        </dependency>
+       <dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet.version}</version>
+			<scope>provided</scope>
+		</dependency>
 
         <dependency>
 		    <groupId>javax.servlet</groupId>
@@ -171,8 +173,8 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <configuration>
-                        <source>1.8</source>
-                        <target>1.8</target>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
                         <encoding>UTF-8</encoding>
                     </configuration>
                 </plugin>
